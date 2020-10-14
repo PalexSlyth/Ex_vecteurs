@@ -5,7 +5,8 @@
 class Vecteur3D
 {
 	float m_fltX, m_fltY, m_fltZ;
-	
+
+
 public:
 	//Q69, a.
 	//Vecteur3D();
@@ -25,14 +26,35 @@ public:
 	}*/
 
 	//Q70, a.
-	inline Vecteur3D(float X = 0, float Y = 0, float Z = 0)
+	/*inline Vecteur3D(float X = 0, float Y = 0, float Z = 0)
 	{
 		m_fltX = X;
 		m_fltY = Y;
 		m_fltZ = Z;
 	}
 
-	bool coincide(Vecteur3D &);
-};
+	bool coincide(Vecteur3D &);*/
 
+	Vecteur3D(float X = 0, float Y = 0, float Z = 0)
+	{
+		m_fltX = X;
+		m_fltY = Y;
+		m_fltZ = Z;
+	}
+	//Q71, a
+	//Vecteur3D& normax(Vecteur3D& vect);
+
+	//Q71, b
+	//Vecteur3D& normax(Vecteur3D& vect);
+
+	//Q71,c
+	//Vecteur3D* normax(Vecteur3D* vect);
+
+
+	//Q72
+	Vecteur3D somme(Vecteur3D&);
+	float scal(Vecteur3D&);
+	void affiche();
+
+};
 #endif // !VECTEUR3D_H

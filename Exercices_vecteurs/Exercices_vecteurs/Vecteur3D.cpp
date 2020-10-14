@@ -42,11 +42,63 @@ using namespace std;
 }*/
 
 //Q70, c
-bool Vecteur3D::coincide(Vecteur3D& vect)
+/*bool Vecteur3D::coincide(Vecteur3D& vect)
 {
 	if ((vect.m_fltX == m_fltX) && (vect.m_fltY == m_fltY) && (vect.m_fltZ == m_fltZ))
 		return true;
 	else
 		return false;
+}*/
+
+//Q71, a
+/*Vecteur3D Vecteur3D::normax(Vecteur3D vect)
+{
+	float vect1 = m_fltX * m_fltX + m_fltY * m_fltY + m_fltZ * m_fltZ;
+	float vect2 = vect.m_fltX * vect.m_fltX + vect.m_fltY * vect.m_fltY + vect.m_fltZ * vect.m_fltZ;
+	if (vect1 > vect2)
+		return *this;
+	else
+		return vect;
+}*/
+
+//Q71, b
+/*Vecteur3D& Vecteur3D::normax(Vecteur3D & vect)
+{
+	float vect1 = m_fltX * m_fltX + m_fltY * m_fltY + m_fltZ * m_fltZ;
+	float vect2 = vect.m_fltX * vect.m_fltX + vect.m_fltY * vect.m_fltY + vect.m_fltZ * vect.m_fltZ;
+	if (vect1 > vect2)
+		return *this;
+	else
+		return vect;
+}*/
+
+//Q72 ,c
+/*Vecteur3D* Vecteur3D::normax(Vecteur3D* vect)
+{
+	float vect1 = m_fltX * m_fltX + m_fltY * m_fltY + m_fltZ * m_fltZ;
+	float vect2 = vect->m_fltX * vect->m_fltX + vect->m_fltY * vect->m_fltY + vect->m_fltZ * vect->m_fltZ;
+	if (vect1 > vect2)
+		return this;
+	else
+		return vect;
+}*/
+
+Vecteur3D Vecteur3D::somme(Vecteur3D& vect)
+{
+	Vecteur3D resultat;
+	resultat.m_fltX = m_fltX + vect.m_fltX;
+	resultat.m_fltY = m_fltY + vect.m_fltY;
+	resultat.m_fltZ = m_fltZ + vect.m_fltZ;
+
+	return resultat;
 }
 
+float Vecteur3D::scal(Vecteur3D& vect)
+{
+	return (vect.m_fltX * m_fltX + vect.m_fltY * m_fltY + vect.m_fltZ * m_fltZ);
+}
+
+void Vecteur3D::affiche()
+{
+	cout << m_fltX << m_fltY << m_fltZ;
+}
