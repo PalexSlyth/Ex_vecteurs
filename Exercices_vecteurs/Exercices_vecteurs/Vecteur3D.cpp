@@ -21,3 +21,32 @@ using namespace std;
 {
 	cout << this->m_fltX << this->m_fltY << this->m_fltZ << endl;
 }*/
+
+
+//Q70, a
+/*bool Vecteur3D::coincide(Vecteur3D vect)
+{
+	if ((vect.m_fltX == m_fltX) && (vect.m_fltY == m_fltY) && (vect.m_fltZ == m_fltZ))
+		return true;
+	else
+		return false;
+}*/
+
+//Q70, b
+/*bool Vecteur3D::coincide(Vecteur3D * vect)
+{
+	if (vect->m_fltX == this->m_fltX) && (vect->m_fltY == this->m_fltY) && (vect->m_fltZ == this->m_fltZ))
+		return true;
+	else
+		return false;
+}*/
+
+//Q70, c
+bool Vecteur3D::coincide(Vecteur3D& vect)
+{
+	if ((vect.m_fltX == m_fltX) && (vect.m_fltY == m_fltY) && (vect.m_fltZ == m_fltZ))
+		return true;
+	else
+		return false;
+}
+
